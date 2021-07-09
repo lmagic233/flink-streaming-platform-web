@@ -77,7 +77,7 @@ public class JobBaseServiceAOImpl implements JobBaseServiceAO {
             throw new BizException("请先开启任务");
         }
         switch (jobConfigDTO.getDeployModeEnum()) {
-            case YARN_PER:
+            case YARN_PER_JOB:
                 this.checYarnQueue(jobConfigDTO);
                 RestResult restResult = CliConfigUtil.checkFlinkRunConfigForYarn(jobConfigDTO.getFlinkRunConfig());
                 if (restResult != null && !restResult.isSuccess()) {
@@ -181,7 +181,7 @@ public class JobBaseServiceAOImpl implements JobBaseServiceAO {
 
 
                     switch (jobConfigDTO.getDeployModeEnum()) {
-                        case YARN_PER:
+                        case YARN_PER_JOB:
                             //1、构建执行命令
                             command = CommandUtil.buildRunCommandForYarnCluster(jobRunParamDTO,
                                     jobConfigDTO, savepointPath);
@@ -285,7 +285,7 @@ public class JobBaseServiceAOImpl implements JobBaseServiceAO {
                             jobRunLogDTO.setRemoteLogUrl(systemConfigService.getFlinkHttpAddress(jobConfig.getDeployModeEnum())
                                     + SystemConstants.HTTP_STANDALONE_APPS + jobConfigDTO.getJobId());
                         }
-                        if (DeployModeEnum.YARN_PER.equals(jobConfig.getDeployModeEnum())) {
+                        if (DeployModeEnum.YARN_PER_JOB.equals(jobConfig.getDeployModeEnum())) {
                             jobRunLogDTO.setRemoteLogUrl(systemConfigService.getYarnRmHttpAddress()
                                     + SystemConstants.HTTP_YARN_CLUSTER_APPS + jobConfigDTO.getJobId());
                         }
@@ -372,7 +372,7 @@ public class JobBaseServiceAOImpl implements JobBaseServiceAO {
             throw new BizException(SysErrorEnum.SYSTEM_CONFIG_IS_NULL_FLINK_HOME);
         }
 
-        if (DeployModeEnum.YARN_PER.equals(deployModeEnum)) {
+        if (DeployModeEnum.YARN_PER_JOB.equals(deployModeEnum)) {
             if (!systemConfigMap.containsKey(SysConfigEnum.YARN_RM_HTTP_ADDRESS.getKey())) {
                 throw new BizException(SysErrorEnum.SYSTEM_CONFIG_IS_NULL_YARN_RM_HTTP_ADDRESS);
             }

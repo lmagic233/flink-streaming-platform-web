@@ -34,7 +34,7 @@ https://www.apache.org/dyn/closer.lua/flink/flink-1.12.0/flink-1.12.0-bin-scala_
 
 a: /flink-1.12.0/conf  
 
-**1、YARN_PER模式** 
+**1、YARN_PER_JOB模式** 
 
 文件下面放入hadoop客户端配置文件
 

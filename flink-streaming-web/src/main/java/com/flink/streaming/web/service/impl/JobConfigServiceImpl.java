@@ -220,7 +220,7 @@ public class JobConfigServiceImpl implements JobConfigService {
             tips.append(" web应用安装的目录 ");
         }
         switch (deployModeEnum) {
-            case YARN_PER:
+            case YARN_PER_JOB:
                 String yarnHttpAddress = systemConfigService.getSystemConfigByKey(
                         SysConfigEnum.YARN_RM_HTTP_ADDRESS.getKey());
                 if (StringUtils.isEmpty(yarnHttpAddress)) {

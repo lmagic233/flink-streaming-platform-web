@@ -97,7 +97,7 @@ public class JobConfigVO {
         String domain = map.get(jobConfigDTO.getDeployModeEnum());
 
         if (StringUtils.isNotEmpty(domain)) {
-            if (DeployModeEnum.YARN_PER.equals(jobConfigDTO.getDeployModeEnum())
+            if (DeployModeEnum.YARN_PER_JOB.equals(jobConfigDTO.getDeployModeEnum())
                     && !StringUtils.isEmpty(jobConfigDTO.getJobId())) {
                 jobConfigVO.setFlinkRunUrl(HttpUtil.buildUrl( domain ,
                         FlinkYarnRestUriConstants.getUriOverviewForYarn(jobConfigDTO.getJobId())));

@@ -76,7 +76,7 @@ public class TaskServiceAOImpl implements TaskServiceAO {
         for (JobConfigDTO jobConfigDTO : jobConfigDTOList) {
             List<AlarmTypeEnum> alarmTypeEnumList = jobAlarmConfigService.findByJobId(jobConfigDTO.getId());
             switch (jobConfigDTO.getDeployModeEnum()) {
-                case YARN_PER:
+                case YARN_PER_JOB:
                     this.checkYarn(jobConfigDTO, alarmTypeEnumList);
                     break;
                 case LOCAL:
@@ -103,7 +103,7 @@ public class TaskServiceAOImpl implements TaskServiceAO {
                 continue;
             }
             switch (jobConfigDTO.getDeployModeEnum()) {
-                case YARN_PER:
+                case YARN_PER_JOB:
                     String appId = null;
                     try {
                         String queueName = YarnUtil.getQueueName(jobConfigDTO.getFlinkRunConfig());
@@ -163,7 +163,7 @@ public class TaskServiceAOImpl implements TaskServiceAO {
         public void run() {
             try {
                 switch (jobConfigDTO.getDeployModeEnum()) {
-                    case YARN_PER:
+                    case YARN_PER_JOB:
                         jobYarnServerAO.savepoint(jobConfigDTO.getId());
                         break;
                     case LOCAL:
@@ -207,7 +207,7 @@ public class TaskServiceAOImpl implements TaskServiceAO {
         //发送告警并且自动拉起任务
         this.alermAndAutoJob(alarmTypeEnumList,
                 SystemConstants.buildDingdingMessage(" 检测到任务停止运行 任务名称：" +
-                        jobConfigDTO.getJobName()), jobConfigDTO, DeployModeEnum.YARN_PER);
+                        jobConfigDTO.getJobName()), jobConfigDTO, DeployModeEnum.YARN_PER_JOB);
 
 
     }
@@ -277,7 +277,7 @@ public class TaskServiceAOImpl implements TaskServiceAO {
             log.info("校验任务不存在,开始自动拉起 JobConfigId={}", callbackDTO.getJobConfigId());
             try {
                 switch (deployModeEnum) {
-                    case YARN_PER:
+                    case YARN_PER_JOB:
                         jobYarnServerAO.start(callbackDTO.getJobConfigId(), null,
                                 SystemConstants.USER_NAME_TASK_AUTO);
                         break;

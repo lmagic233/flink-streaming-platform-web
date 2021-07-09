@@ -62,9 +62,9 @@
             <div class="breadcrumbs ace-save-state" id="breadcrumbs">
                 <ul class="breadcrumb">
                     <li>
-                        <a href="#">配置管理</a>
+                        <a href="#">作业管理</a>
                     </li>
-                    <li class="active">自定义Jar任务列表</li>
+                    <li class="active">JAR任务列表</li>
                 </ul>
             </div>
 
@@ -83,7 +83,7 @@
                                        name="jobName" <#if (jobConfigParam??)> value="${jobConfigParam.jobName!""}" </#if> />
                             </div>
                             <div class="col-sm-2">
-                                <input type="text" class="form-control" placeholder="任务id"
+                                <input type="text" class="form-control" placeholder="任务ID"
                                        name="jobId"  <#if (jobConfigParam??) >  value="${jobConfigParam.jobId!""}" </#if> />
                             </div>
                             <div class="col-sm-2">
@@ -129,7 +129,7 @@
                                 <tr>
                                     <th>配置ID</th>
                                     <th>任务名称</th>
-                                    <th width="90px" >是否开用</th>
+                                    <th width="90px" >是否开启</th>
                                     <th>运行模式</th>
                                     <th>运行状态</th>
                                     <th>任务id</th>
@@ -187,7 +187,7 @@
 
                                             <td>${jobConfigVO.createTime!""}</td>
 <#--                                            <td>-->
-<#--                                                <#if jobConfigVO.deployMode=="YARN_PER">-->
+<#--                                                <#if jobConfigVO.deployMode=="YARN_PER_JOB">-->
 <#--                                                    <a href="/admin/savepointList?jobConfigId=${jobConfigVO.id!""}"  target="_blank">历史备份</a>-->
 <#--                                                </#if>-->
 <#--                                                <#if jobConfigVO.deployMode=="LOCAL">-->

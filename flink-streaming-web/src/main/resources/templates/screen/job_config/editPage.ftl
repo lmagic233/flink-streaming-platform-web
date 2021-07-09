@@ -46,7 +46,7 @@
             <div class="breadcrumbs ace-save-state" id="breadcrumbs">
                 <ul class="breadcrumb">
                     <li>
-                        <a href="#">配置管理</a>
+                        <a href="#">作业管理</a>
                     </li>
                     <li class="active">编辑配置</li>
                 </ul>
@@ -105,7 +105,7 @@
                             <div class="form-group">
                                 <label for="inputfile">*运行模式：</label>
                                 <select class="form-control " id="deployMode">
-                                    <option value="YARN_PER"  <#if jobConfig.deployMode??&& jobConfig.deployMode=="YARN_PER" > selected </#if> >YARN_PER</option>
+                                    <option value="YARN_PER_JOB"  <#if jobConfig.deployMode??&& jobConfig.deployMode=="YARN_PER_JOB" > selected </#if> >YARN_PER_JOB</option>
                                     <option value="LOCAL"     <#if jobConfig.deployMode??&& jobConfig.deployMode=="LOCAL" > selected </#if> >Local Cluster</option>
                                     <option value="STANDALONE"     <#if jobConfig.deployMode??&& jobConfig.deployMode=="STANDALONE" > selected </#if> >Standalone Cluste</option>
                                 </select>

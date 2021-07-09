@@ -1,7 +1,7 @@
 <#--<div class="col-sm-3 col-md-2 sidebar ">-->
 
 <#--    <ul class="nav nav-list">-->
-<#--        <li class="nav-header" class="active">配置管理</li>-->
+<#--        <li class="nav-header" class="active">作业管理</li>-->
 <#--        <li <#if active??&& active=="list" > class="active" </#if> ><a href="/admin/listPage">任务列表  </a></li>-->
 <#--        <li <#if active??&&active=="addpage" > class="active" </#if> ><a href="/admin/addPage">新增配置</a></li>-->
 <#--        <li class="nav-header" >日志管理</li>-->
@@ -25,23 +25,23 @@
         <li <#if open??&& open=="config" > class="open" </#if>>
             <a href="#" class="dropdown-toggle">
                 <i class="menu-icon  fa fa-list"></i>
-                <span class="menu-text"> 配置管理 </span>
+                <span class="menu-text"> 作业管理 </span>
 
                 <b class="arrow fa fa-angle-down"></b>
             </a>
             <b class="arrow"></b>
             <ul class="submenu">
-                <li <#if active??&& active=="list" > class="active" </#if> >
-                    <a href="/admin/listPage">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        SQL任务列表
-                    </a>
-                    <b class="arrow"></b>
-                </li>
                 <li <#if active??&& active=="jarlist" > class="active" </#if>>
                     <a href="/admin/jarListPage">
                         <i class="menu-icon fa fa-caret-right"></i>
                         JAR任务列表
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+                <li <#if active??&& active=="list" > class="active" </#if> >
+                    <a href="/admin/listPage">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        SQL任务列表
                     </a>
                     <b class="arrow"></b>
                 </li>
@@ -129,7 +129,7 @@
                 </li>
             </ul>
         </li>
-        <li <#if open??&& open=="qrcode" > class="open" </#if>>
+        <#--<li <#if open??&& open=="qrcode" > class="open" </#if>>
             <a href="#" class="dropdown-toggle">
                 <i class="menu-icon  fa fa-search" ></i>
                 <span class="menu-text">联系方式</span>
@@ -145,7 +145,7 @@
                     <b class="arrow"></b>
                 </li>
             </ul>
-        </li>
+        </li>-->
 
 
     </ul>

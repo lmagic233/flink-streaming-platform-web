@@ -12,7 +12,7 @@
     <div class="navbar-header pull-left">
         <a href="../admin/listPage" class="navbar-brand">
             <small>
-                Flink流计算平台管理系统
+                NiceTuan Flink Streaming Workshop
             </small>
         </a>
     </div>

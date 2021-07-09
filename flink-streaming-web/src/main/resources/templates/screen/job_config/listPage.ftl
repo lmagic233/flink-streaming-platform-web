@@ -63,7 +63,7 @@
             <div class="breadcrumbs ace-save-state" id="breadcrumbs">
                 <ul class="breadcrumb">
                     <li>
-                        <a href="#">配置管理</a>
+                        <a href="#">作业管理</a>
                     </li>
                     <li class="active">Flink-SQL任务列表</li>
                 </ul>

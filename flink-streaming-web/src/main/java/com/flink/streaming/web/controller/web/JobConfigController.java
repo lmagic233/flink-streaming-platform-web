@@ -127,7 +127,7 @@ public class JobConfigController {
             jobConfigVOList = Collections.emptyList();
         } else {
             Map<DeployModeEnum, String> domainKey = new HashMap<>();
-            domainKey.put(DeployModeEnum.YARN_PER,
+            domainKey.put(DeployModeEnum.YARN_PER_JOB,
                     systemConfigService.getSystemConfigByKey(SysConfigEnum.YARN_RM_HTTP_ADDRESS.getKey()));
             domainKey.put(DeployModeEnum.LOCAL,
                     systemConfigService.getSystemConfigByKey(SysConfigEnum.FLINK_REST_HTTP_ADDRESS.getKey()));

@@ -8,7 +8,7 @@ a: 任务名称（*必选）
 
 b: 运行模式
 
-   YARN_PER( yarn独立模式 https://ci.apache.org/projects/flink/flink-docs-release-1.11/zh/ops/deployment/yarn_setup.html#run-a-single-flink-job-on-yarn)
+   YARN_PER_JOB( yarn独立模式 https://ci.apache.org/projects/flink/flink-docs-release-1.11/zh/ops/deployment/yarn_setup.html#run-a-single-flink-job-on-yarn)
 
 
    STANDALONE（独立集群 https://ci.apache.org/projects/flink/flink-docs-release-1.11/zh/ops/deployment/cluster_setup.html）
@@ -22,7 +22,7 @@ b: 运行模式
 
 c: flink运行配置
 
-<font color=red size=5>1、YARN_PER模式 </font>
+<font color=red size=5>1、YARN_PER_JOB模式 </font>
 
 ~~~~
 

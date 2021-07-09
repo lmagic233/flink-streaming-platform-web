@@ -277,7 +277,7 @@ public class JobConfigApiController extends BaseController {
         }
 
 
-        if (DeployModeEnum.YARN_PER.name().equals(upsertJobConfigParam.getDeployMode())) {
+        if (DeployModeEnum.YARN_PER_JOB.name().equals(upsertJobConfigParam.getDeployMode())) {
             if (StringUtils.isEmpty(upsertJobConfigParam.getFlinkRunConfig())) {
                 return RestResult.error("flink运行配置不能为空");
             }
@@ -308,7 +308,7 @@ public class JobConfigApiController extends BaseController {
             case LOCAL:
                 log.info(" 本地模式启动 {}", deployModeEnum);
                 return jobStandaloneServerAO;
-            case YARN_PER:
+            case YARN_PER_JOB:
                 log.info(" yan per 模式启动 {}", deployModeEnum);
                 return jobYarnServerAO;
             case STANDALONE:

@@ -44,7 +44,7 @@
             <div class="breadcrumbs ace-save-state" id="breadcrumbs">
                 <ul class="breadcrumb">
                     <li>
-                        <a href="#">配置管理</a>
+                        <a href="#">作业管理</a>
                     </li>
                     <li class="active">新增任务</li>
                 </ul>
@@ -87,7 +87,7 @@
                                 <label for="inputfile">*运行模式：</label>
                                 <select class="form-control " id="deployMode">
                                     <option value="">请选择</option>
-                                    <option value="YARN_PER">YARN_PER</option>
+                                    <option value="YARN_PER_JOB">YARN_PER_JOB</option>
                                     <option value="LOCAL">Local Cluster</option>
                                     <option value="STANDALONE">Standalone Cluster</option>
                                 </select>
