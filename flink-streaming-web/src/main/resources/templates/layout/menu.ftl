@@ -34,7 +34,18 @@
                 <li <#if active??&& active=="jarlist" > class="active" </#if>>
                     <a href="/admin/jarListPage">
                         <i class="menu-icon fa fa-caret-right"></i>
+<#--<<<<<<< HEAD-->
                         JAR任务列表
+<#--=======-->
+<#--                        SQL流任务列表-->
+<#--                    </a>-->
+<#--                    <b class="arrow"></b>-->
+<#--                </li>-->
+<#--                <li <#if active??&& active=="batchlist" > class="active" </#if> >-->
+<#--                    <a href="/admin/batchListPage">-->
+<#--                        <i class="menu-icon fa fa-caret-right"></i>-->
+<#--                        SQL批任务列表-->
+<#-->>>>>>> master-->
                     </a>
                     <b class="arrow"></b>
                 </li>
